@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CRUDS</title>
+</head>
+    <button class="colors_news">new color</button>
+    <div class="crud">
+       <div class="head">
+        <h2>الادارة</h2>
+        <p>PRODUCT MANAGEMENT SYSTEM</p>
+       </div>
+       <div class="inputs">
+        <p class="error_title"></p>
+        <input type="text" placeholder="الاسم المنتج" id="title">
+        <div class="price">
+            <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+            <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+            <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+            <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+            <small id="total" onkeyup="getTotal()"></small>
+        </div>
+        <input type="number" id="count" placeholder="عدد الكمية">
+        <p class="error_category"></p>
+        <input type="text" id="category" placeholder="نواع المنتج">
+        <button id="submit">انشاء منتاج جديد</button>
+       </div>
+       <div class="outputs">
+           <div class="serachBlock">
+               <input type="text" onkeyup="serachData(this.value)" id="serach" placeholder="البحث">
+               <div class="btnSearch">
+                <button onclick="getSearchMood(this.id)" id="serachTitle">البحث عن اسم المنتج</button>
+                <button onclick="getSearchMood(this.id)" id="serachTCatego">البحث عن نوع المنتج</button>
+               </div> 
+               <img class="icon_cancel none" src="./all_icon/cancel-24px.svg" alt="">
+               <div class="dont_serch none">
+                    
+                     <p>لا يوجد العنصر الدي تبحث عنها</p>
+               </div>
+            
+               <table class="none"> 
+               
+                 <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+               <tbody id="tbodyserch">
+               </tbody>
+            
+            </table>
+           </div>
+           <div id="deleteAll">
+            
+           </div>
+           <table> 
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+            <tbody id="tbody" class="tbody">
+                 <!-- <tr>
+                    <td>1</td>
+                     <td>samsung</td>
+                      <td>2000</td>
+                       <td>100</td>
+                        <td>100</td>
+                         <td>100</td>
+                          <td>2100</td>
+                           <td>phone</td>
+                            <td>100</td>
+                            <td><button id="update">update</button></td>
+                            <td><button id="delete">delete</button></td>
+                </tr> -->
+            </tbody>
+           </table>
+       </div>
+    </div>
+</div>
+    <!--  -->
+    <script src="main.js"></script>
+   <!--add coloe body -->
+   <script src="colormain.js"></script>
+</body>
+</html>
